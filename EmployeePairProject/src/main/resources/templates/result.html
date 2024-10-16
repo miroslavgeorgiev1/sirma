@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Project Results</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Common Projects</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Employee ID #1</th>
+            <th>Employee ID #2</th>
+            <th>Total Days Worked</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="detail : ${projectDetails}">
+            <td th:text="${detail.empId1}"></td>
+            <td th:text="${detail.empId2}"></td>
+            <td th:text="${detail.totalDaysWorked}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-secondary">Upload Another File</a>
+</div>
+</body>
+</html>
